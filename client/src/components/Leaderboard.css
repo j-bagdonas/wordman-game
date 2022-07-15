@@ -1,0 +1,31 @@
+.leaderboard{
+  position: fixed;
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(67, 130, 186);
+  width:30vw;
+  height: auto;
+  border-radius: 8px;
+  z-index: 10;
+  text-align: center;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  padding:10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.scoreTable {
+  margin-right: 65px;
+}
+
+@media screen and (max-width: 450px) {
+  .leaderboard{
+    width:90vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .leaderboard{
+    min-width:90vw;
+  }
+
+}

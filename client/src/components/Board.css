@@ -1,0 +1,168 @@
+.board {
+    height: 50vh;
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: column-reverse; 
+    height: fit-content;
+    min-width: 40vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.word {
+    background-color: rgba(159, 144, 144, 0.535);
+    border-radius: 8px;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width:40vw;
+    color:rgb(11, 54, 92);
+    font-weight: bolder;
+}
+
+.keyboard {
+  background-color: rgba(159, 144, 144, 0.535);
+  border-radius: 10px;
+  display: flex; 
+  flex-direction: column; 
+  min-width:40vw;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.letter {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    min-height: 20px;
+    /* background-color: rgb(93, 82, 82); */
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.key {
+    background-color: rgb(93, 82, 82);
+    padding: 10px;
+    min-width: 15px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.key:hover {
+    background-color: black;
+}
+
+.keyRow {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.guessedKey {
+    background-color: rgb(67, 130, 186);
+      padding: 10px;
+    min-width: 15px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    animation-name: spinAboutYaxis;
+    animation-duration: 1s;
+}
+
+@keyframes spinAboutYaxis {
+    0% {transform: rotateY(0deg);}
+    50% {transform: rotateY(50deg)}
+    100% {transform: rotateY(0deg)}
+}
+
+.letterDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0;
+
+}
+
+.underline {
+    padding-top: 0;
+    margin-top:0;
+    height: 2px;
+    background-color: rgb(249, 238, 238);
+    width: 30px;
+}
+
+.scoreAlert {
+    position: fixed;
+    background-color: rgb(67, 130, 186);
+    width:200px;
+    border-radius: 8px;
+    z-index: 10;
+    text-align: center;
+    animation-name: spinAndFade;
+    animation-duration: 2s;
+}
+@keyframes spinAndFade {
+  
+      0% {transform: rotate(0deg);}
+      50% {transform: rotate(360deg)}
+      75% {opacity:50;transform: rotate(360deg)}
+      100% {opacity: 0;transform: rotate(360deg)}
+}
+
+.info{
+    min-width: 40vw;
+    font-size: large;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    .board, .keyboard{
+      width:100vw;
+    }
+
+    .key, .guessedKey {
+      margin: 2px;
+      padding:10px;
+      min-width:10px;
+    }
+
+    .letterDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 30px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    
+ }
+ 
+
+ @media screen and (max-width: 1000px) {
+  .board, .keyboard{
+    min-width:70vw;
+    max-width:95vw;
+  }
+ }
+ @media screen and (max-width: 1300px) {
+  .key, .guessedKey{
+    margin: 2px;
+    padding:10px;
+    min-width:10px;
+  }
+ }

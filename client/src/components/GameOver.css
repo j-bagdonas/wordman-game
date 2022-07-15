@@ -1,0 +1,49 @@
+
+.gameOverAlert, .gameInit {
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(67, 130, 186);
+    width:30vw;
+    border-radius: 8px;
+    z-index: 10;
+    text-align: center;
+    animation-name: spin;
+    animation-duration: 1s;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.gameOverAlert, .gameInit, button, input {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+@keyframes spin {
+    to{transform: rotate(0deg);}
+    from {transform: rotate(360deg)}
+}
+
+button {
+    padding: 10px 15px;
+    background: #f3ffff;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 6px;
+    color:rgb(67, 130, 186);
+}
+
+input {
+    padding: 10px 15px;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+@media screen and (max-width: 750px) {
+  .gameOverAlert, .gameInit{
+    min-width:90vw;
+  }
+
+}
