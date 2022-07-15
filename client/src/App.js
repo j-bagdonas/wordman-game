@@ -50,7 +50,7 @@ function App() {
         word={word}
         score={score}
         setScore={setScore}
-		    fetchWord={fetchWord}
+	fetchWord={fetchWord}
         gameOver={gameOver}
         resetTimer={resetTimer}
         setResetTimer={setResetTimer}
